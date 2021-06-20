@@ -2,11 +2,8 @@
 pipeline{
     agent any
     stages{
-        stage("Git Checkout"){
-            steps{
-                git credentialsId: 'git-token', url: 'https://github.com/dinhash/Jenkins'
-            }
-        }
+        
+      
 	stage("Terraform init"){
 			      steps{
 				         sh label: '', script: 'terraform init'
